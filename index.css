@@ -1,0 +1,649 @@
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h3{
+  font-family: 'Segoe UI';
+  font-size: 28px;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  background-color: #181F1C;
+  color: #60712F;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 25px 300px 0px 300px;
+  padding: 5px 50px;
+  border-radius: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #C3CE64;
+ 
+}
+
+#logo {
+  margin-right: auto;
+}
+
+#logo img {
+  height: 45px;
+  display: block;
+    float: left;
+}
+
+#logo p {
+  display: flex;
+  font-family: "Cascadia Code";
+  font-weight: 700;
+  font-size: large; 
+  color: #315C2B;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.link {
+  font-family: "Cascadia Code";
+  padding: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  transition: all 0.5s ease;
+}
+
+.link:hover {
+  background-color: #C3CE64;
+  color: black;
+  cursor: pointer;
+}
+
+.but {
+  font-family: "Cascadia Code";
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #315C2B;
+  color: white;
+  font-weight: 400;
+  transition: 0.5s ease;
+  border: 2px solid transparent;
+}
+
+.but:hover {
+  background-color: #ffffff;
+  color: #315C2B;
+  border: 2px solid #315C2B;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 300px;
+  gap: 40px;
+}
+
+#descr p{
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+#features {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+#foto_1 img {
+  width: 800px;
+  height: 533px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+#descr {
+  width: 300px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-top: 100px;
+}
+
+#feature-1 { 
+  flex-direction: row; 
+}
+
+#feature-2 {
+  flex-direction: row-reverse; 
+}
+
+#feature-3 {
+  flex-direction: row; 
+}
+
+.feature {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.feature.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-img img {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  border-radius: 30px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.feature-img img:hover {
+  transform: scale(1.03);
+}
+
+.feature-testo {
+  max-width: 500px;
+}
+
+.feature-testo h3 {
+  margin: 10px 0;
+}
+
+.feature-testo p {
+  font-family: "Cascadia Code";
+  color: #555;
+
+}
+
+.tag {
+  font-family: "Cascadia Code";
+  display: inline-block;
+  background-color: #C3CE64;
+  color: #60712F;
+  padding: 6px 14px;
+  border-radius: 1000px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+#features p {
+  font-family: "Cascadia Code";
+  color: #777;
+}
+
+#missione {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 250px 350px;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+#missione.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#missione p{
+  font-size: 20px;
+  font-family: "Cascadia Code";
+  color: #777;
+}
+
+#missione img{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 30px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+#chi-siamo {
+  padding: 150px 350px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+#chi-siamo.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#chi-siamo h3{
+  margin: 10px 0;
+  
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+#sottotitolo {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 48px;
+}
+
+.griglia {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 auto 12px;
+}
+
+.av-blue   { background: #abd5ff; color: #0C447C; }
+.av-teal   { background: #a5ffe0; color: #085041; }
+.av-coral  { background: #ffb99f; color: #712B13; }
+.av-purple { background: #aaa4ff; color: #3C3489; }
+.av-amber  { background: #ffdca0; color: #633806; }
+
+.member-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.member-role {
+  font-size: 12px;
+  color: #888;
+}
+
+#newsletter {
+  padding: 150px 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenitore-newsletter {
+  background-color: #C3CE64;
+  border-radius: 30px;
+  padding: 60px;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+.contenitore-newsletter h2 {
+  font-size: 32px;
+  margin: 10px 0;
+  color: #315C2B;
+}
+
+.contenitore-newsletter p {
+  font-family: "Cascadia Code";
+  color: #315C2B;
+  margin-bottom: 30px;
+}
+
+.form-newsletter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-newsletter input {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  width: 250px;
+  font-family: "Cascadia Code";
+}
+
+.form-newsletter input:focus {
+  outline: 2px solid #315C2B;
+}
+
+.nota-newsletter {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #315C2B;
+}
+
+
+
+
+
+
+
+
+.footer-principale {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 0 20px 0;
+  margin-top: 100px;
+}
+
+.contenitore-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.sezione-footer {
+  flex: 1;
+  min-width: 200px;
+}
+
+.sezione-footer h3 {
+  font-family: "Cascadia Code";
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #C3CE64;
+  letter-spacing: 1px;
+}
+
+.sezione-footer p {
+  font-family: "Cascadia Code";
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+/* LINK */
+.sezione-footer a {
+  display: inline-block;
+  font-family: "Cascadia Code";
+  font-size: 14px;
+  color: #bbbbbb;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.sezione-footer a:hover {
+  color: #C3CE64;
+  transform: translateX(3px);
+}
+
+/* LINEA DIVISORIA */
+.footer-basso {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-basso p {
+  font-family: "Cascadia Code";
+  font-size: 12px;
+  color: #888;
+}
+
+
+/* RESPONSIVE */
+
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 5px;
+  }
+
+  /* NAV */
+  @media (max-width: 768px) {
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  ul {
+    display: none; 
+  }
+
+  #logo img {
+    height: 28px;
+  }
+
+  #logo p {
+    font-size: 13px;
+  }
+}
+
+  /* HERO */
+  #hero {
+    flex-direction: column;
+    padding: 120px 20px 40px 20px;
+    text-align: center;
+  }
+
+  #descr {
+    width: 100%;
+  }
+
+  #descr p {
+    font-size: 24px;
+  }
+
+  #foto_1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FEATURES */
+  #features {
+    padding: 60px 20px;
+  }
+
+  .feature {
+    flex-direction: column !important;
+    gap: 30px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .feature-testo {
+    max-width: 100%;
+  }
+
+  /* MISSIONE */
+  #missione {
+    flex-direction: column;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  /* CHI SIAMO */
+  #chi-siamo {
+    padding: 80px 20px;
+  }
+
+  .griglia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    padding: 80px 20px;
+  }
+
+  .contenitore-newsletter {
+    padding: 30px 20px;
+  }
+
+  .form-newsletter {
+    flex-direction: column;
+  }
+
+  .form-newsletter input {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .contenitore-footer {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  body {
+    padding: 8px;
+  }
+
+  /* NAV */
+  nav {
+    margin: 15px 40px;
+    padding: 10px 25px;
+  }
+
+  #logo img {
+    height: 38px;
+  }
+
+  ul {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .link {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .but {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  #hero {
+    padding: 120px 60px;
+    gap: 30px;
+  }
+
+  #descr p {
+    font-size: 30px;
+  }
+
+  #foto_1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FEATURES */
+  #features {
+    padding: 100px 40px;
+  }
+
+  .feature {
+    gap: 40px;
+  }
+
+  .feature-img img {
+    max-width: 400px;
+  }
+
+  /* MISSIONE */
+  #missione {
+    padding: 150px 80px;
+    gap: 30px;
+  }
+
+  #missione img {
+    max-width: 400px;
+  }
+
+  /* CHI SIAMO */
+  #chi-siamo {
+    padding: 120px 80px;
+  }
+
+  .griglia {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    padding: 120px 60px;
+  }
+
+  .contenitore-newsletter {
+    padding: 40px;
+  }
+
+  /* FOOTER */
+  .contenitore-footer {
+    padding: 0 30px;
+    gap: 30px;
+  }
+}
