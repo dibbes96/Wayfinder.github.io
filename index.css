@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-h3{
+h3 {
   font-family: 'Segoe UI';
   font-size: 28px;
 }
@@ -31,7 +31,6 @@ nav {
   right: 0;
   z-index: 1000;
   background-color: #C3CE64;
- 
 }
 
 #logo {
@@ -41,14 +40,14 @@ nav {
 #logo img {
   height: 45px;
   display: block;
-    float: left;
+  float: left;
 }
 
 #logo p {
   display: flex;
   font-family: "Cascadia Code";
   font-weight: 700;
-  font-size: large; 
+  font-size: large;
   color: #315C2B;
 }
 
@@ -106,7 +105,7 @@ ul {
   gap: 40px;
 }
 
-#descr p{
+#descr p {
   font-family: "Cascadia Code";
   font-size: 40px;
   max-width: 600px;
@@ -137,16 +136,16 @@ ul {
   margin-top: 100px;
 }
 
-#feature-1 { 
-  flex-direction: row; 
+#feature-1 {
+  flex-direction: row;
 }
 
 #feature-2 {
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 
 #feature-3 {
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .feature {
@@ -184,7 +183,6 @@ ul {
 .feature-testo p {
   font-family: "Cascadia Code";
   color: #555;
-
 }
 
 .tag {
@@ -220,13 +218,13 @@ ul {
   transform: translateY(0px);
 }
 
-#missione p{
+#missione p {
   font-size: 20px;
   font-family: "Cascadia Code";
   color: #777;
 }
 
-#missione img{
+#missione img {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -234,15 +232,6 @@ ul {
   display: block;
   transition: transform 0.5s ease;
 }
-
-
-
-
-
-
-
-
-
 
 #chi-siamo {
   padding: 150px 300px;
@@ -256,9 +245,8 @@ ul {
   transform: translateY(0px);
 }
 
-#chi-siamo h3{
+#chi-siamo h3 {
   margin: 10px 0;
-  
 }
 
 .section-title {
@@ -300,11 +288,30 @@ ul {
   margin: 0 auto 12px;
 }
 
-.av-blue   { background: #abd5ff; color: #0C447C; }
-.av-teal   { background: #a5ffe0; color: #085041; }
-.av-coral  { background: #ffb99f; color: #712B13; }
-.av-purple { background: #aaa4ff; color: #3C3489; }
-.av-amber  { background: #ffdca0; color: #633806; }
+.av-blue {
+  background: #abd5ff;
+  color: #0C447C;
+}
+
+.av-teal {
+  background: #a5ffe0;
+  color: #085041;
+}
+
+.av-coral {
+  background: #ffb99f;
+  color: #712B13;
+}
+
+.av-purple {
+  background: #aaa4ff;
+  color: #3C3489;
+}
+
+.av-amber {
+  background: #ffdca0;
+  color: #633806;
+}
 
 .member-name {
   font-size: 13px;
@@ -369,13 +376,6 @@ ul {
   margin-top: 15px;
   color: #315C2B;
 }
-
-
-
-
-
-
-
 
 .footer-principale {
   background-color: #1a1a1a;
@@ -444,39 +444,34 @@ ul {
   color: #888;
 }
 
-
 /* RESPONSIVE */
-
-
 @media (max-width: 768px) {
-
   body {
     padding: 5px;
   }
 
   /* NAV */
   @media (max-width: 768px) {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8px 15px;
+      margin: 10px;
+      border-radius: 20px;
+    }
 
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 8px 15px;
-    margin: 10px;
-    border-radius: 20px;
-  }
+    ul {
+      display: none;
+    }
 
-  ul {
-    display: none; 
-  }
+    #logo img {
+      height: 28px;
+    }
 
-  #logo img {
-    height: 28px;
+    #logo p {
+      font-size: 13px;
+    }
   }
-
-  #logo p {
-    font-size: 13px;
-  }
-}
 
   /* HERO */
   #hero {
@@ -555,7 +550,6 @@ ul {
 }
 
 @media (max-width: 1024px) {
-
   body {
     padding: 8px;
   }
