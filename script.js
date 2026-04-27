@@ -10,3 +10,9 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".feature, #missione, #chi-siamo")
   .forEach(el => observer.observe(el));
+
+const toggle = document.getElementById('menu-toggle');
+const menu = document.querySelector('nav ul');
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
