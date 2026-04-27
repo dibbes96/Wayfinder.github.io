@@ -444,39 +444,102 @@ ul {
   color: #888;
 }
 
-/* RESPONSIVE */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #315C2B;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    margin: 25px 40px 0 40px;
+    padding: 5px 24px;
+  }
+
+  #hero {
+    padding: 130px 60px 80px;
+    gap: 30px;
+  }
+
+  #descr p {
+    font-size: 28px;
+  }
+
+  #features {
+    padding: 80px 40px;
+  }
+
+  .feature {
+    gap: 40px;
+  }
+
+  .feature-img img {
+    max-width: 380px;
+  }
+
+  #missione {
+    padding: 150px 60px;
+  }
+
+  #chi-siamo {
+    padding: 100px 60px;
+  }
+
+  .griglia {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #newsletter {
+    padding: 100px 60px;
+  }
+
+  .contenitore-footer {
+    padding: 0 40px;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
-  body {
-    padding: 5px;
+  /* --- NAV --- */
+  nav {
+    margin: 15px 16px 0 16px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
-  /* NAV */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 8px 15px;
-      margin: 10px;
-      border-radius: 20px;
-    }
-
-    ul {
-      display: none;
-    }
-
-    #logo img {
-      height: 28px;
-    }
-
-    #logo p {
-      font-size: 13px;
-    }
+  #menu-toggle {
+    display: block;
   }
 
-  /* HERO */
+  ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0 0 0;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  ul.open {
+    display: flex;
+  }
+
+  .link {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- HERO --- */
   #hero {
     flex-direction: column;
-    padding: 120px 20px 40px 20px;
+    padding: 120px 20px 60px;
     text-align: center;
   }
 
@@ -485,15 +548,18 @@ ul {
   }
 
   #descr p {
-    font-size: 24px;
+    font-size: 22px;
+    max-width: 100%;
+    margin-bottom: 24px;
   }
 
   #foto_1 img {
     width: 100%;
     height: auto;
+    border-radius: 20px;
   }
 
-  /* FEATURES */
+  /* --- FEATURES --- */
   #features {
     padding: 60px 20px;
   }
@@ -502,21 +568,29 @@ ul {
     flex-direction: column !important;
     gap: 30px;
     margin-top: 60px;
-    text-align: center;
+  }
+
+  .feature-img img {
+    max-width: 100%;
   }
 
   .feature-testo {
     max-width: 100%;
   }
 
-  /* MISSIONE */
+  /* --- MISSIONE --- */
   #missione {
     flex-direction: column;
     padding: 80px 20px;
     text-align: center;
+    gap: 30px;
   }
 
-  /* CHI SIAMO */
+  #missione img {
+    max-width: 100%;
+  }
+
+  /* --- CHI SIAMO --- */
   #chi-siamo {
     padding: 80px 20px;
   }
@@ -525,119 +599,70 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* NEWSLETTER */
+  .section-title {
+    font-size: 26px;
+  }
+
+  /* --- NEWSLETTER --- */
   #newsletter {
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
 
   .contenitore-newsletter {
-    padding: 30px 20px;
+    padding: 40px 24px;
+  }
+
+  .contenitore-newsletter h2 {
+    font-size: 24px;
   }
 
   .form-newsletter {
     flex-direction: column;
+    align-items: center;
   }
 
   .form-newsletter input {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  /* FOOTER */
+  /* --- FOOTER --- */
   .contenitore-footer {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 24px;
+    gap: 24px;
+  }
+
+  .sezione-footer {
+    min-width: unset;
+  }
+
+  .footer-principale {
+    padding: 40px 0 20px 0;
+    margin-top: 60px;
   }
 }
 
-@media (max-width: 1024px) {
-  body {
-    padding: 8px;
-  }
-
-  /* NAV */
-  nav {
-    margin: 15px 40px;
-    padding: 10px 25px;
-  }
-
-  #logo img {
-    height: 38px;
-  }
-
-  ul {
-    gap: 12px;
-    padding: 10px;
-  }
-
-  .link {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .but {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  /* HERO */
-  #hero {
-    padding: 120px 60px;
-    gap: 30px;
-  }
-
+@media (max-width: 480px) {
   #descr p {
-    font-size: 30px;
+    font-size: 18px;
   }
 
-  #foto_1 img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* FEATURES */
-  #features {
-    padding: 100px 40px;
-  }
-
-  .feature {
-    gap: 40px;
-  }
-
-  .feature-img img {
-    max-width: 400px;
-  }
-
-  /* MISSIONE */
-  #missione {
-    padding: 150px 80px;
-    gap: 30px;
-  }
-
-  #missione img {
-    max-width: 400px;
-  }
-
-  /* CHI SIAMO */
-  #chi-siamo {
-    padding: 120px 80px;
+  h3,
+  .section-title {
+    font-size: 22px;
   }
 
   .griglia {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* NEWSLETTER */
-  #newsletter {
-    padding: 120px 60px;
+    grid-template-columns: 1fr;
   }
 
   .contenitore-newsletter {
-    padding: 40px;
+    padding: 30px 16px;
   }
 
-  /* FOOTER */
-  .contenitore-footer {
-    padding: 0 30px;
-    gap: 30px;
+  nav {
+    margin: 10px 12px 0 12px;
   }
 }
