@@ -1,23 +1,57 @@
+/*PALETTE*/
+:root {
+  --colore-sfondo:           #181F1C;   /* sfondo body */
+  --colore-testo-primario:   #60712F;   /* testo body */
+  --colore-accento:          #C3CE64;   /* nav, tag, newsletter bg, hover link footer */
+  --colore-verde-scuro:      #315C2B;   /* logo testo, pulsante .but, testi newsletter */
+  --colore-bianco:           #ffffff;   /* bg ul nav, testo .but hover, testi vari */
+  --colore-nero-footer:      #1a1a1a;   /* footer bg, section-title */
+ 
+  --colore-testo-grigio-1:   #555;      /* feature-testo p */
+  --colore-testo-grigio-2:   #777;      /* features p, missione p */
+  --colore-testo-grigio-3:   #666;      /* sottotitolo */
+  --colore-testo-grigio-4:   #888;      /* member-role, footer-basso p */
+  --colore-testo-grigio-5:   #bbbbbb;   /* link sezione-footer */
+  --colore-testo-grigio-6:   #cccccc;   /* p sezione-footer */
+ 
+  --colore-bordo-card:       #eee;      /* card border */
+  --colore-bordo-footer:     #333;      /* footer-basso border-top */
+ 
+  --av-blue-bg:    #abd5ff;
+  --av-blue-fg:    #0C447C;
+  --av-teal-bg:    #a5ffe0;
+  --av-teal-fg:    #085041;
+  --av-coral-bg:   #ffb99f;
+  --av-coral-fg:   #712B13;
+  --av-purple-bg:  #aaa4ff;
+  --av-purple-fg:  #3C3489;
+  --av-amber-bg:   #ffdca0;
+  --av-amber-fg:   #633806;
+}
+ 
 a {
   text-decoration: none;
 }
-
+ 
 html {
   scroll-behavior: smooth;
 }
-
+ 
 h3 {
   font-family: 'Segoe UI';
   font-size: 28px;
 }
-
+ 
 body {
   margin: 0;
   padding: 10px;
-  background-color: #181F1C;
-  color: #60712F;
+  background-color: var(--colore-sfondo);
+  color: var(--colore-testo-primario);
 }
-
+ 
+/* ============================================
+   NAV
+   ============================================ */
 nav {
   display: flex;
   justify-content: flex-end;
@@ -30,27 +64,27 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #C3CE64;
+  background-color: var(--colore-accento);
 }
-
+ 
 #logo {
   margin-right: auto;
 }
-
+ 
 #logo img {
   height: 45px;
   display: block;
   float: left;
 }
-
+ 
 #logo p {
   display: flex;
   font-family: "Cascadia Code";
   font-weight: 700;
   font-size: large;
-  color: #315C2B;
+  color: var(--colore-verde-scuro);
 }
-
+ 
 ul {
   list-style: none;
   display: flex;
@@ -59,9 +93,9 @@ ul {
   margin: 10px;
   padding: 15px;
   border-radius: 50px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--colore-bianco);
 }
-
+ 
 .link {
   font-family: "Cascadia Code";
   padding: 10px;
@@ -71,32 +105,35 @@ ul {
   font-weight: 700;
   transition: all 0.5s ease;
 }
-
+ 
 .link:hover {
-  background-color: #C3CE64;
+  background-color: var(--colore-accento);
   color: black;
   cursor: pointer;
 }
-
+ 
 .but {
   font-family: "Cascadia Code";
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: #315C2B;
-  color: white;
+  background-color: var(--colore-verde-scuro);
+  color: var(--colore-bianco);
   font-weight: 400;
   transition: 0.5s ease;
   border: 2px solid transparent;
 }
-
+ 
 .but:hover {
-  background-color: #ffffff;
-  color: #315C2B;
-  border: 2px solid #315C2B;
+  background-color: var(--colore-bianco);
+  color: var(--colore-verde-scuro);
+  border: 2px solid var(--colore-verde-scuro);
 }
-
+ 
+/* ============================================
+   HERO
+   ============================================ */
 #hero {
   display: flex;
   align-items: center;
@@ -104,61 +141,64 @@ ul {
   padding: 150px 300px;
   gap: 40px;
 }
-
+ 
 #descr p {
   font-family: "Cascadia Code";
   font-size: 40px;
   max-width: 600px;
   margin-bottom: 40px;
 }
-
-#features {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 0;
-}
-
+ 
 #foto_1 img {
   width: 800px;
   height: 533px;
   border-radius: 30px;
   object-fit: cover;
 }
-
+ 
 #descr {
   width: 300px;
 }
-
+ 
+/* ============================================
+   FEATURES
+   ============================================ */
+#features {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+ 
 .feature {
   display: flex;
   align-items: center;
   gap: 80px;
   margin-top: 100px;
 }
-
+ 
 #feature-1 {
   flex-direction: row;
 }
-
+ 
 #feature-2 {
   flex-direction: row-reverse;
 }
-
+ 
 #feature-3 {
   flex-direction: row;
 }
-
+ 
 .feature {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease;
 }
-
+ 
 .feature.show {
   opacity: 1;
   transform: translateY(0);
 }
-
+ 
 .feature-img img {
   width: 100%;
   max-width: 500px;
@@ -167,41 +207,44 @@ ul {
   display: block;
   transition: transform 0.5s ease;
 }
-
+ 
 .feature-img img:hover {
   transform: scale(1.03);
 }
-
+ 
 .feature-testo {
   max-width: 500px;
 }
-
+ 
 .feature-testo h3 {
   margin: 10px 0;
 }
-
+ 
 .feature-testo p {
   font-family: "Cascadia Code";
-  color: #555;
+  color: var(--colore-testo-grigio-1);
 }
-
+ 
 .tag {
   font-family: "Cascadia Code";
   display: inline-block;
-  background-color: #C3CE64;
-  color: #60712F;
+  background-color: var(--colore-accento);
+  color: var(--colore-testo-primario);
   padding: 6px 14px;
   border-radius: 1000px;
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 12px;
 }
-
+ 
 #features p {
   font-family: "Cascadia Code";
-  color: #777;
+  color: var(--colore-testo-grigio-2);
 }
-
+ 
+/* ============================================
+   MISSIONE
+   ============================================ */
 #missione {
   display: flex;
   align-items: center;
@@ -212,18 +255,18 @@ ul {
   transform: translateY(50px);
   transition: all 0.8s ease;
 }
-
+ 
 #missione.show {
   opacity: 1;
   transform: translateY(0px);
 }
-
+ 
 #missione p {
   font-size: 20px;
   font-family: "Cascadia Code";
-  color: #777;
+  color: var(--colore-testo-grigio-2);
 }
-
+ 
 #missione img {
   width: 100%;
   max-width: 500px;
@@ -232,50 +275,53 @@ ul {
   display: block;
   transition: transform 0.5s ease;
 }
-
+ 
+/* ============================================
+   CHI SIAMO
+   ============================================ */
 #chi-siamo {
   padding: 150px 300px;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease;
 }
-
+ 
 #chi-siamo.show {
   opacity: 1;
   transform: translateY(0px);
 }
-
+ 
 #chi-siamo h3 {
   margin: 10px 0;
 }
-
+ 
 .section-title {
   font-size: 36px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--colore-nero-footer);
   margin-bottom: 8px;
 }
-
+ 
 #sottotitolo {
   font-size: 15px;
-  color: #666;
+  color: var(--colore-testo-grigio-3);
   margin-bottom: 48px;
 }
-
+ 
 .griglia {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
-
+ 
 .card {
-  background: white;
-  border: 1px solid #eee;
+  background: var(--colore-bianco);
+  border: 1px solid var(--colore-bordo-card);
   border-radius: 16px;
   padding: 20px;
   text-align: center;
 }
-
+ 
 .avatar {
   width: 52px;
   height: 52px;
@@ -287,78 +333,62 @@ ul {
   font-weight: 500;
   margin: 0 auto 12px;
 }
-
-.av-blue {
-  background: #abd5ff;
-  color: #0C447C;
-}
-
-.av-teal {
-  background: #a5ffe0;
-  color: #085041;
-}
-
-.av-coral {
-  background: #ffb99f;
-  color: #712B13;
-}
-
-.av-purple {
-  background: #aaa4ff;
-  color: #3C3489;
-}
-
-.av-amber {
-  background: #ffdca0;
-  color: #633806;
-}
-
+ 
+.av-blue   { background: var(--av-blue-bg);   color: var(--av-blue-fg); }
+.av-teal   { background: var(--av-teal-bg);   color: var(--av-teal-fg); }
+.av-coral  { background: var(--av-coral-bg);  color: var(--av-coral-fg); }
+.av-purple { background: var(--av-purple-bg); color: var(--av-purple-fg); }
+.av-amber  { background: var(--av-amber-bg);  color: var(--av-amber-fg); }
+ 
 .member-name {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--colore-nero-footer);
   margin-bottom: 4px;
 }
-
+ 
 .member-role {
   font-size: 12px;
-  color: #888;
+  color: var(--colore-testo-grigio-4);
 }
-
+ 
+/* ============================================
+   NEWSLETTER
+   ============================================ */
 #newsletter {
   padding: 150px 350px;
   display: flex;
   justify-content: center;
 }
-
+ 
 .contenitore-newsletter {
-  background-color: #C3CE64;
+  background-color: var(--colore-accento);
   border-radius: 30px;
   padding: 60px;
   text-align: center;
   max-width: 700px;
   width: 100%;
 }
-
+ 
 .contenitore-newsletter h2 {
   font-size: 32px;
   margin: 10px 0;
-  color: #315C2B;
+  color: var(--colore-verde-scuro);
 }
-
+ 
 .contenitore-newsletter p {
   font-family: "Cascadia Code";
-  color: #315C2B;
+  color: var(--colore-verde-scuro);
   margin-bottom: 30px;
 }
-
+ 
 .form-newsletter {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
 }
-
+ 
 .form-newsletter input {
   padding: 12px 16px;
   border-radius: 10px;
@@ -366,24 +396,27 @@ ul {
   width: 250px;
   font-family: "Cascadia Code";
 }
-
+ 
 .form-newsletter input:focus {
-  outline: 2px solid #315C2B;
+  outline: 2px solid var(--colore-verde-scuro);
 }
-
+ 
 .nota-newsletter {
   font-size: 12px;
   margin-top: 15px;
-  color: #315C2B;
+  color: var(--colore-verde-scuro);
 }
-
+ 
+/* ============================================
+   FOOTER
+   ============================================ */
 .footer-principale {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: var(--colore-nero-footer);
+  color: var(--colore-bianco);
   padding: 60px 0 20px 0;
   margin-top: 100px;
 }
-
+ 
 .contenitore-footer {
   max-width: 1200px;
   margin: 0 auto;
@@ -393,118 +426,124 @@ ul {
   flex-wrap: wrap;
   gap: 40px;
 }
-
+ 
 .sezione-footer {
   flex: 1;
   min-width: 200px;
 }
-
+ 
 .sezione-footer h3 {
   font-family: "Cascadia Code";
   font-size: 16px;
   margin-bottom: 20px;
-  color: #C3CE64;
+  color: var(--colore-accento);
   letter-spacing: 1px;
 }
-
+ 
 .sezione-footer p {
   font-family: "Cascadia Code";
   font-size: 14px;
-  color: #cccccc;
+  color: var(--colore-testo-grigio-6);
   margin-bottom: 10px;
 }
-
-/* LINK */
+ 
 .sezione-footer a {
   display: inline-block;
   font-family: "Cascadia Code";
   font-size: 14px;
-  color: #bbbbbb;
+  color: var(--colore-testo-grigio-5);
   text-decoration: none;
   margin-bottom: 8px;
   transition: all 0.3s ease;
 }
-
+ 
 .sezione-footer a:hover {
-  color: #C3CE64;
+  color: var(--colore-accento);
   transform: translateX(3px);
 }
-
-/* LINEA DIVISORIA */
+ 
 .footer-basso {
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--colore-bordo-footer);
   margin-top: 40px;
   padding-top: 20px;
   text-align: center;
 }
-
+ 
 .footer-basso p {
   font-family: "Cascadia Code";
   font-size: 12px;
-  color: #888;
+  color: var(--colore-testo-grigio-4);
 }
-
+ 
+/* ============================================
+   MENU TOGGLE
+   ============================================ */
 #menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 24px;
-  color: #315C2B;
+  color: var(--colore-verde-scuro);
   cursor: pointer;
   margin-left: auto;
 }
-
+ 
+/* ============================================
+   RESPONSIVE — 1024px
+   ============================================ */
 @media (max-width: 1024px) {
   nav {
     margin: 25px 40px 0 40px;
     padding: 5px 24px;
   }
-
+ 
   #hero {
     padding: 130px 60px 80px;
     gap: 30px;
   }
-
+ 
   #descr p {
     font-size: 28px;
   }
-
+ 
   #features {
     padding: 80px 40px;
   }
-
+ 
   .feature {
     gap: 40px;
   }
-
+ 
   .feature-img img {
     max-width: 380px;
   }
-
+ 
   #missione {
     padding: 150px 60px;
   }
-
+ 
   #chi-siamo {
     padding: 100px 60px;
   }
-
+ 
   .griglia {
     grid-template-columns: repeat(3, 1fr);
   }
-
+ 
   #newsletter {
     padding: 100px 60px;
   }
-
+ 
   .contenitore-footer {
     padding: 0 40px;
     gap: 30px;
   }
 }
-
+ 
+/* ============================================
+   RESPONSIVE — 768px
+   ============================================ */
 @media (max-width: 768px) {
-  /* --- NAV --- */
   nav {
     margin: 15px 16px 0 16px;
     padding: 8px 20px;
@@ -512,11 +551,11 @@ ul {
     flex-wrap: wrap;
     align-items: center;
   }
-
+ 
   #menu-toggle {
     display: block;
   }
-
+ 
   ul {
     display: none;
     width: 100%;
@@ -526,142 +565,139 @@ ul {
     padding: 12px;
     border-radius: 16px;
   }
-
+ 
   ul.open {
     display: flex;
   }
-
+ 
   .link {
     width: 100%;
     text-align: center;
   }
-
-  /* --- HERO --- */
+ 
   #hero {
     flex-direction: column;
     padding: 120px 20px 60px;
     text-align: center;
   }
-
+ 
   #descr {
     width: 100%;
   }
-
+ 
   #descr p {
     font-size: 22px;
     max-width: 100%;
     margin-bottom: 24px;
   }
-
+ 
   #foto_1 img {
     width: 100%;
     height: auto;
     border-radius: 20px;
   }
-
-  /* --- FEATURES --- */
+ 
   #features {
     padding: 60px 20px;
   }
-
+ 
   .feature {
     flex-direction: column !important;
     gap: 30px;
     margin-top: 60px;
   }
-
+ 
   .feature-img img {
     max-width: 100%;
   }
-
+ 
   .feature-testo {
     max-width: 100%;
   }
-
-  /* --- MISSIONE --- */
+ 
   #missione {
     flex-direction: column;
     padding: 80px 20px;
     text-align: center;
     gap: 30px;
   }
-
+ 
   #missione img {
     max-width: 100%;
   }
-
-  /* --- CHI SIAMO --- */
+ 
   #chi-siamo {
     padding: 80px 20px;
   }
-
+ 
   .griglia {
     grid-template-columns: repeat(2, 1fr);
   }
-
+ 
   .section-title {
     font-size: 26px;
   }
-
-  /* --- NEWSLETTER --- */
+ 
   #newsletter {
     padding: 60px 20px;
   }
-
+ 
   .contenitore-newsletter {
     padding: 40px 24px;
   }
-
+ 
   .contenitore-newsletter h2 {
     font-size: 24px;
   }
-
+ 
   .form-newsletter {
     flex-direction: column;
     align-items: center;
   }
-
+ 
   .form-newsletter input {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
   }
-
-  /* --- FOOTER --- */
+ 
   .contenitore-footer {
     flex-direction: column;
     padding: 0 24px;
     gap: 24px;
   }
-
+ 
   .sezione-footer {
     min-width: unset;
   }
-
+ 
   .footer-principale {
     padding: 40px 0 20px 0;
     margin-top: 60px;
   }
 }
-
+ 
+/* ============================================
+   RESPONSIVE — 480px
+   ============================================ */
 @media (max-width: 480px) {
   #descr p {
     font-size: 18px;
   }
-
+ 
   h3,
   .section-title {
     font-size: 22px;
   }
-
+ 
   .griglia {
     grid-template-columns: 1fr;
   }
-
+ 
   .contenitore-newsletter {
     padding: 30px 16px;
   }
-
+ 
   nav {
     margin: 10px 12px 0 12px;
   }
