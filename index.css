@@ -1,18 +1,18 @@
 /*PALETTE*/
 :root {
-  --colore-sfondo:           #181F1C;   /* sfondo body */
-  --colore-testo-primario:   #60712F;   /* testo body */
-  --colore-accento:          #C3CE64;   /* nav, tag, newsletter bg, hover link footer */
-  --colore-verde-scuro:      #315C2B;   /* logo testo, pulsante .but, testi newsletter */
-  --colore-bianco:           #ffffff;   /* bg ul nav, testo .but hover, testi vari */
-  --colore-nero-footer:      #1a1a1a;   /* footer bg, section-title */
- 
-  --colore-testo-grigio-1:   #555;      /* feature-testo p */
-  --colore-testo-grigio-2:   #777;      /* features p, missione p */
-  --colore-testo-grigio-3:   #666;      /* sottotitolo */
-  --colore-testo-grigio-4:   #888;      /* member-role, footer-basso p */
-  --colore-testo-grigio-5:   #bbbbbb;   /* link sezione-footer */
-  --colore-testo-grigio-6:   #cccccc;   /* p sezione-footer */
+--colore-sfondo:           #0F1A2E;
+--colore-testo-primario:   #4A90C4;
+--colore-accento:          #7EC8E3;
+--colore-verde-scuro:      #1A4A7A;
+--colore-bianco:           #ffffff;
+--colore-nero-footer:      #0A1628;
+
+--colore-testo-grigio-1:   #3D5066;
+--colore-testo-grigio-2:   #5A6E82;
+--colore-testo-grigio-3:   #4E6275;
+--colore-testo-grigio-4:   #7A8FA0;
+--colore-testo-grigio-5:   #A8BDD0;
+--colore-testo-grigio-6:   #C2D4E0;
  
   --colore-bordo-card:       #eee;      /* card border */
   --colore-bordo-footer:     #333;      /* footer-basso border-top */
